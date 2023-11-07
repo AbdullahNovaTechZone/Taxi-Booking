@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+            <img src="images/logo.png" alt="">
+        </div>
+
+        <span class="logo_name">Admin</span>
+    </div>
+
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a href="/admin/dashboard">
+                <i class="uil uil-dashboard"></i>
+                <span class="link-name">Dashboard</span>
+            </a></li>
+            <li><a href="/admin/users">
+                <i class="uil uil-user"></i>
+                <span class="link-name">Users</span>
+            </a></li>
+            <li><a href="/admin/prompts">
+                <i class="uil uil-equal-circle"></i>
+                <span class="link-name">Prompts</span>
+            </a></li>
+            <li><a href="/admin/prompt-types">
+                <i class="uil uil-minus-circle"></i>
+                <span class="link-name">Prompt Types</span>
+            </a></li>
+            <li><a href="/admin/admins">
+                <i class="uil uil-user-plus"></i>
+                <span class="link-name">Admins</span>
+            </a></li>
+        </ul>
+
+        <ul class="logout-mode">
+            <li><a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+            </a></li>
+
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="dashboard">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+    </div>
+
+    <div class="sales-boxes mt-4">
+        <div class="recent-sales">
+            <div class="row">
+                <table class="table">
+                    <span class="fs-5 fw-bold mb-2" style="margin-left: -15px">Drivers</span>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Driver Details</th>
+                        <th>Contact Details</th>
+                        <th>Vehicle Details</th>
+                        <th>Package</th>
+                        <th>Account</th>
+                        <th>Option</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <span>Driver ID : <span>ID234</span> </span><br/>
+                            <span>Username : <span>driver1</span> </span><br/>
+                            <span>Name : <span>driver1</span> </span><br/>
+                            <span>Gender : <span>male</span> </span><br/>
+                            <span>NIC : <span>773121418v</span> </span><br/>
+                            <span>NIC : <span>773121418v</span> </span><br/>
+                            <span>Registered Date : <span>2022-10-17</span> </span><br/>
+                            <span>Registered Time : <span>11:05:25 am</span> </span><br/>
+                        </td>
+                        <td>
+                            <span>Contact : <span>077 111 2222</span> </span><br/>
+                            <span>Emergency : <span>077 111 2222</span> </span><br/>
+                            <span>Email : <span>driver1@gmail.com</span> </span><br/>
+                            <span>Address : <span>No 21/2, colombo 5.</span> </span><br/>
+                        </td>
+                        <td>
+                            <span>Vehicle Type : <span>car</span> </span><br/>
+                            <span>Plate No : <span>KC-1212</span> </span><br/>
+                            <span>Color : <span>Red</span> </span><br/>
+                            <span>Manufacture Year : <span>2015</span> </span><br/>
+                        </td>
+                        <td>
+                            <span>Vehicle Type : <span>car</span> </span><br/>
+                            <span>Passengers : <span>4</span> </span><br/>
+                            <span>Minimum Distance : <span>5</span> KM </span><br/>
+                            <span>Minimum Charge : <span>Rs.</span> 150 </span><br/>
+                            <span>Per KM charge : <span>Rs.</span> 50 </span><br/>
+                        </td>
+                        <td>
+                            <span>Cash Earnings : <span>Rs.</span> 0.00 </span><br/>
+                            <span>Card Earnings : <span>Rs.</span> 0.00 </span><br/>
+                            <span>Total Earnings : <span>Rs.</span> 0.00 </span><br/>
+                            <span>Payable Commission : <span>Rs.</span> 0.00 </span><br/>
+                        </td>
+                        <td>
+                            <span class="text-center"><i class="bi bi-x-square text-dark fs-5"></i></span>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--    <div class="dash-content">-->
+    <!--        <div class="overview">-->
+    <!--            <div class="title">-->
+    <!--                <i class="uil uil-tachometer-fast-alt"></i>-->
+    <!--                <span class="text">Dashboard</span>-->
+    <!--            </div>-->
+
+    <!--            <div class="boxes">-->
+    <!--                <div class="box box1">-->
+    <!--                    <i class="uil uil-user"></i>-->
+    <!--                    <span class="text">Total Users</span>-->
+    <!--                    <span class="number" th:text="${userCount}"></span>-->
+    <!--                </div>-->
+    <!--                <div class="box box2">-->
+    <!--                    <i class="uil uil-align-justify"></i>-->
+    <!--                    <span class="text">Total Prompts</span>-->
+    <!--                    <span class="number" th:text="${promptCount}"></span>-->
+    <!--                </div>-->
+    <!--                <div class="box box3">-->
+    <!--                    <i class="uil uil-align-center-justify"></i>-->
+    <!--                    <span class="text">Total Prompt Types</span>-->
+    <!--                    <span class="number" th:text="${promptTypeCount}">10,120</span>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+    <!--        <div class="activity">-->
+    <!--            <div class="title">-->
+    <!--                <i class="uil uil-clock-three"></i>-->
+    <!--                <span class="text">Recently Joined Users</span>-->
+    <!--            </div>-->
+
+    <!--            <section class="tables-page-section">-->
+    <!--                <div class="container">-->
+    <!--                    <div class="row">-->
+    <!--                        <div class="col-sm-12">-->
+    <!--                            <div class="table-responsive">-->
+    <!--                                <table class="table">-->
+    <!--                                    <thead>-->
+    <!--                                    <th>ID</th>-->
+    <!--                                    <th>Name</th>-->
+    <!--                                    <th>Email</th>-->
+    <!--                                    </thead>-->
+    <!--                                    <tr th:each="user:${users}">-->
+    <!--                                        <th th:text="${user.id}"></th>-->
+    <!--                                        <td th:text="${user.name}"></td>-->
+    <!--                                        <td th:text="${user.email}"></td>-->
+    <!--                                    </tr>-->
+    <!--                                </table>-->
+    <!--                            </div>-->
+
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </section>-->
+
+    <!--        </div>-->
+    <!--    </div>-->
+</section>
+<script src="/assets/js/script.js"></script>
+</body>
